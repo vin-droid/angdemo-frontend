@@ -6,7 +6,10 @@ import { RouterModule,Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PostComponent } from './post/post.component';
 const appRoutes: Routes = [
-{ path: 'posts',      component: PostComponent }
+{ path: 'posts',      component: PostComponent },
+{
+  path: '',redirectTo: '/posts',pathMatch: 'full'
+}
 ];
 @NgModule({
   declarations: [

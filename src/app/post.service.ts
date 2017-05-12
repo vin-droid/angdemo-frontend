@@ -8,10 +8,11 @@ import {Post} from './post/post';
 
 @Injectable()
 export class PostService {
+	private postUrl = 'http://localhost:3000/posts'
   constructor(private http:Http) { }
 
   getAllPosts(): Observable<any>{
-  	return this.http.get('http://localhost:3000/posts.json').map(
+  	return this.http.get('http://localhost:3000/posts').map(
   		res =>{
   			const data = res.json();
   			return data;
